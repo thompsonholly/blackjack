@@ -1,0 +1,38 @@
+h1 {
+  color: gold;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  text-align: center;
+  /* font-size: 75px; */
+}
+
+body {
+  background-image: url("./images/tennisgreen.jpg");
+  background-size: cover;
+  font-family: 'Trebuchet MS', 'Lucinda Sans Unicode', 'Lucinda Grande', 'Lucinda Sans', Arial, sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#message-el {
+  font-style: italic;
+  /* font-size: 50px; */
+}
+
+p {
+  /* font-size: 40px; */
+}
+
+button {
+  color: #016f32;
+  /* font-size: 15px; */
+  width: 150px;
+  background-color: gold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+}
