@@ -1,7 +1,10 @@
+// Create the player object. Give it two keys, name and chips
+let player = {
+  name: "Barry",
+  chips: 200
 
+}
 
-
-// let hitCard = num3;
 let cards = []
 let sum = 0
 let hasBlackJack = false;
@@ -14,9 +17,13 @@ let sumEl = document.getElementById("sum-el")
 // getting cards paragraph by id
 let cardsEl = document.getElementById("cards-el")
 
+let playerEl = document.getElementById("player-el")
+
+playerEl.textContent = player.name + " :$" + player.chips
+
 //Creat a function, getRandomCard
 function getRandomCard() {
-  let randomNumber = Math.floor(Math.random() * 13) + 1 // 1-13
+  let randomNumber = Math.floor( Math.random() * 13 ) + 1 // 1-13
   if (randomNumber > 10) {
     return 10
   } else if (randomNumber === 1) {
@@ -25,7 +32,6 @@ function getRandomCard() {
     return randomNumber
   }
 }
-
 
 
 // creating a startGame() function to call renderGame function to differeniate start and continue game
@@ -62,14 +68,18 @@ function renderGame() {
 
 }
 
-function newCard() { 
+function newCard() {
   // Only allow the player to get a new card if she is IS alive and does NOT have Blackjack
-  let card = getRandomCard()
-  sum += card
-  // Push the card to the cards array
-  cards.push(card)
+
+  if (isAlive === true && hasBlackJack === false) {
+
+    let card = getRandomCard()
+    sum += card
+    // Push the card to the cards array
+    cards.push(card)
 
 
-  // sumEl.textContent = "Sum: " + sum + hitCard
-  renderGame()
+    // sumEl.textContent = "Sum: " + sum + hitCard
+    renderGame()
+  }
 }
